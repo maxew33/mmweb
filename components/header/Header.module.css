@@ -44,15 +44,15 @@
   object-fit: contain;
 }
 
-.phone,
+.appointment,
 .link,
-.navBarPhone {
+.navBarappointment {
   position: relative;
   color: var(--accent);
 }
-.phone::after,
+.appointment::after,
 .link::after,
-.navBarPhone::after {
+.navBarappointment::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -64,32 +64,19 @@
   transition: transform 0.15s linear;
   transform-origin: left;
 }
-.phone.active::after, .phone:hover::after,
+.appointment.active::after, .appointment:hover::after,
 .link.active::after,
 .link:hover::after,
-.navBarPhone.active::after,
-.navBarPhone:hover::after {
+.navBarappointment.active::after,
+.navBarappointment:hover::after {
   transform: scaleX(1);
 }
 
-.phone {
+.appointment {
   font-size: 1.5rem;
 }
 
-.malt {
-  fill: var(--accent);
-}
-.malt svg {
-  border: 1px solid transparent;
-  border-radius: 50%;
-  padding: 0.1rem;
-  transition: border-color 0.075s linear;
-}
-.malt svg:hover {
-  border-color: var(--primary);
-}
-
-.phoneContainer {
+.appointmentContainer {
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -208,7 +195,7 @@
   align-items: center;
 }
 
-.navBarPhone::after {
+.navBarappointment::after {
   bottom: 0.5rem;
   height: 3px;
 }
@@ -251,17 +238,11 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .header {
-    align-items: flex-start;
-  }
   .burger {
     position: relative;
     top: unset;
     left: unset;
     transform: unset;
-  }
-  .phoneContainer {
-    display: none;
   }
   .navigationWrapper {
     clip-path: circle(var(--clippy) at calc(100% - 4rem) 2rem);

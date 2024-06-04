@@ -4,11 +4,11 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './Hero.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+    faFacebook,
     faLinkedin,
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
-import Malt from '@/components/malt/malt'
 
 export default function Hero({ height, width }) {
     const [illusData, setIllusData] = useState([])
@@ -34,7 +34,7 @@ export default function Hero({ height, width }) {
     // ====== Animations ====== /
 
     /* carousel */
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(3)
 
     useEffect(() => {
         illusData.length > 0 &&
@@ -84,14 +84,13 @@ export default function Hero({ height, width }) {
 
                 <div className={styles.linkWrapper}>
                     <a
-                        href="https://www.linkedin.com/in/maxime-malfilatre/"
-                        aria-label="Linkedin"
+                        href="https://www.facebook.com/profile.php?id=61559959007115"
                         target="_blank"
                         rel="noopener"
-                        // className={styles.link}
+                        aria-label="facebook"
                     >
                         <FontAwesomeIcon
-                            icon={faLinkedin}
+                            icon={faFacebook}
                             className={styles.icon}
                         />
                     </a>
@@ -107,15 +106,18 @@ export default function Hero({ height, width }) {
                         />
                     </a>
                     <a
-                        href="https://www.malt.fr/profile/maximemalfilatre"
+                        href="https://www.linkedin.com/company/maxime-malfilatre-ei/"
+                        aria-label="Linkedin"
                         target="_blank"
                         rel="noopener"
-                        aria-label="malt"
+                        // className={styles.link}
                     >
-                        <span className={styles.icon}>
-                            <Malt size="2.5rem" />
-                        </span>
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            className={styles.icon}
+                        />
                     </a>
+
                     <Link href="/service/" className={styles.link}>
                         Mes services
                     </Link>

@@ -47,32 +47,19 @@
     object-fit: contain;
 }
 
-.phone,
+.appointment,
 .link,
-.navBarPhone {
+.navBarappointment {
     position: relative;
     color: var(--accent);
     @include underline(var(--accent));
 }
 
-.phone {
+.appointment {
     font-size: 1.5rem;
 }
 
-.malt {
-    fill: var(--accent);
-    svg {
-        border: 1px solid transparent;
-        border-radius: 50%;
-        padding: 0.1rem;
-        transition: border-color 0.075s linear;
-        &:hover {
-            border-color: var(--primary);
-        }
-    }
-}
-
-.phoneContainer {
+.appointmentContainer {
     color: var(--accent);
     display: flex;
     align-items: center;
@@ -200,7 +187,7 @@
     align-items: center;
 }
 
-.navBarPhone {
+.navBarappointment {
     &::after {
         bottom: 0.5rem;
         height: 3px;
@@ -252,19 +239,12 @@
 }
 
 @media screen and (max-width: 576px) {
-    .header {
-        align-items: flex-start;
-    }
 
     .burger {
         position: relative;
         top: unset;
         left: unset;
         transform: unset;
-    }
-
-    .phoneContainer {
-        display: none;
     }
 
     .navigationWrapper {

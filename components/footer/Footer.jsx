@@ -3,11 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+    faFacebook,
     faLinkedin,
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
-import Malt from '../malt/malt'
 
 export default function Footer() {
     return (
@@ -39,7 +39,6 @@ export default function Footer() {
                 >
                     Mentions Légales
                 </Link>
-                {/* <Link href="/blog">articles</Link> */}
                 <Link
                     href="/contact"
                     className={`${styles.contact} ${styles.link}`}
@@ -47,17 +46,18 @@ export default function Footer() {
                     contact
                 </Link>
                 <div className={styles.social}>
-                    <Link
-                        href="https://www.linkedin.com/in/maxime-malfilatre/"
-                        aria-label="Linkedin"
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61559959007115"
                         target="_blank"
                         rel="noopener"
+                        aria-label="facebook"
                     >
                         <FontAwesomeIcon
-                            icon={faLinkedin}
+                            icon={faFacebook}
                             className={styles.icon}
                         />
-                    </Link>
+                    </a>
+
                     <a
                         href="https://www.instagram.com/maxew.dev/"
                         aria-label="instagram"
@@ -68,16 +68,17 @@ export default function Footer() {
                             icon={faSquareInstagram}
                             className={styles.icon}
                         />
-                    </a>{' '}
+                    </a>
                     <a
-                        href="https://www.malt.fr/profile/maximemalfilatre"
+                        href="https://www.linkedin.com/company/maxime-malfilatre-ei/"
+                        aria-label="Linkedin"
                         target="_blank"
                         rel="noopener"
-                        aria-label="malt"
                     >
-                        <span className={styles.icon}>
-                            <Malt size="2rem" />
-                        </span>
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            className={styles.icon}
+                        />
                     </a>
                 </div>
             </div>

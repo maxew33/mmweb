@@ -14,7 +14,6 @@ import {
     faPaperPlane,
     faThumbsUp,
 } from '@fortawesome/free-solid-svg-icons'
-import Malt from '@/components/malt/malt'
 
 export default function Contact() {
     const [modalDisplayed, setModalDisplayed] = useState(false)
@@ -240,7 +239,7 @@ export default function Contact() {
                         </h2>
                         <div className={styles.linkWrapper}>
                             <a
-                                href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                href="https://www.linkedin.com/company/maxime-malfilatre-ei/"
                                 aria-label="Linkedin"
                                 target="_blank"
                                 rel="noopener"

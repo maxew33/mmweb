@@ -7,11 +7,11 @@ import React, { useState } from 'react'
 import styles from './Header.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+    faFacebook,
     faLinkedin,
     faSquareInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import Wave from '../wave/wave'
-import Malt from '../malt/malt'
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -66,6 +66,16 @@ export default function Header() {
                         className={styles.logo}
                     />
                 </Link>
+
+                <div className={styles.appointmentContainer}>
+                    <a
+                        href="https://calendar.app.google/x5FM2reA2PDo4JkA8"
+                        className={styles.appointment}
+                    >
+                        Prendre rendez-vous
+                    </a>
+                </div>
+
                 <button
                     onClick={displayNav}
                     className={styles.burger}
@@ -73,22 +83,6 @@ export default function Header() {
                 >
                     <span></span>
                 </button>
-                <div className={styles.phoneContainer}>
-                    <a href="tel:0781847657" className={styles.phone}>
-                        07 81 84 76 57
-                    </a>
-                    {/* -
-                    <a
-                        href="https://www.malt.fr/profile/maximemalfilatre"
-                        target="_blank"
-                        rel="noopener"
-                        aria-label="malt"
-                    >
-                        <span className={styles.malt}>
-                            <Malt size="1.75rem" />
-                        </span>
-                    </a> */}
-                </div>
 
                 <section
                     className={`${styles.navigationWrapper} ${
@@ -136,13 +130,13 @@ export default function Header() {
                             </a>
                             <div className={styles.social}>
                                 <a
-                                    href="https://www.linkedin.com/in/maxime-malfilatre/"
-                                    aria-label="Linkedin"
+                                    href="https://www.facebook.com/profile.php?id=61559959007115"
                                     target="_blank"
                                     rel="noopener"
+                                    aria-label="facebook"
                                 >
                                     <FontAwesomeIcon
-                                        icon={faLinkedin}
+                                        icon={faFacebook}
                                         className={styles.icon}
                                     />
                                 </a>
@@ -158,14 +152,15 @@ export default function Header() {
                                     />
                                 </a>
                                 <a
-                                    href="https://www.malt.fr/profile/maximemalfilatre"
+                                    href="https://www.linkedin.com/in/maxime-malfilatre/"
+                                    aria-label="Linkedin"
                                     target="_blank"
                                     rel="noopener"
-                                    aria-label="malt"
                                 >
-                                    <span className={styles.icon}>
-                                        <Malt size="2.5rem" />
-                                    </span>
+                                    <FontAwesomeIcon
+                                        icon={faLinkedin}
+                                        className={styles.icon}
+                                    />
                                 </a>
                             </div>
                         </div>
