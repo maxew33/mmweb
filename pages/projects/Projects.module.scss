@@ -1,0 +1,313 @@
+@use 'sass:math';
+@import '../../styles/scss/utils/mixins';
+
+$nbItems:6;
+
+.main {
+    color: var(--text);
+    position: relative;
+    min-height: 80vh;
+    overflow-x: hidden;
+    width: 100%;
+    > * {
+        line-height: 1.75;
+    }
+    // @include sectionBg;
+    background: #fff;
+}
+
+.header {
+    margin: 2rem auto 4rem;
+    width: min(1000px, 98%);
+}
+
+.headerTitle {
+    @include title;
+    margin: unset;
+}
+
+.headerContent {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.contactBtn {
+    display: inline-block;
+    text-decoration: none;
+    @include contactUs($size: 1.25rem);
+    padding: 0.75rem 1.5rem;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: min(100%, 1000px);
+    height: 25rem;
+    margin: 5rem auto 10rem;
+}
+
+.projectsContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 480px;
+    width: 340px;
+}
+
+.firstAnim, .projectContainer{
+    position: absolute;
+    padding: 1rem;
+
+}
+
+.firstAnim{    
+    animation: displayingcards .5s steps(1) forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
+
+    @for $i from 0 through $nbItems {
+        &[data-position='#{$i}'] {
+            --delay: #{$i * .05s};
+            z-index: $i + 2;
+            transform: rotate($i * 1deg) translate( $i * 10vmin, $i * -5vmin);
+        }
+    }
+    ~span{
+        color: white;
+    }
+}
+
+
+
+@keyframes displayingcards{
+   
+    to {
+        opacity: 1;
+    }
+}
+
+
+.projectContainer {
+    transition: transform 0.25s linear;
+    cursor: pointer;
+    transform-origin: bottom right;
+
+    @for $i from 0 through $nbItems {
+        &[data-position='#{$i}'] {
+            z-index: $i + 2;
+            transform: rotate($i * 1deg);
+        }
+    }
+
+    &:not([data-position='#{$nbItems}']) {
+        pointer-events: none;
+    }
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(-50%);
+    opacity: 0;
+    width: 80%;
+    text-align: center;
+    transition: opacity 0.125s linear;
+    &[data-position='#{$nbItems}'],
+    &[data-position='-1'] {
+        opacity: 1;
+    }
+}
+
+//arrows
+
+.arrowsWrapper {
+    width: min(75vw, 700px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.arrow {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: unset;
+    background: unset;
+
+    &::after {
+        position: absolute;
+        top: 0;
+    }
+
+    div {
+        position: relative;
+        height: 3px;
+        width: 3rem;
+        background: var(--accent);
+        border-radius: 25px;
+        transform-origin: var(--arrow-transform-origin);
+        transition: 0.25s transform ease-in-out;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            background: var(--accent);
+            height: 3px;
+            width: 50%;
+            border-radius: 25px;
+            transition: 0.25s transform ease-in-out;
+            transform-origin: var(--arrow-transform-origin);
+        }
+    }
+
+    &:hover > div {
+        &::after {
+            transform: rotate(25deg);
+        }
+        &::before {
+            transform: rotate(-25deg);
+        }
+    }
+}
+
+.left {
+    --arrow-transform-origin: left;
+    > div {
+        &::after {
+            left: 0;
+        }
+        &::before {
+            left: 0;
+        }
+    }
+}
+
+.right {
+    --arrow-transform-origin: right;
+    > div {
+        &::after {
+            transform: translateX(-100%) rotate(90deg);
+            right: 0;
+        }
+        &::before {
+            transform: translateX(-100%) rotate(-90deg);
+            right: 0;
+        }
+    }
+}
+
+/* anim for moving discs from front to back */
+.projectContainer {
+    &[data-position='#{$nbItems + 1}'] {
+        z-index: 9;
+        animation: linear 0.5s forwards running to-the-back;
+    }
+
+    &[data-position='-1'] {
+        z-index: 0;
+        animation: linear 0.5s forwards running to-the-front;
+    }
+}
+
+@keyframes to-the-back {
+    0% {
+        transform: translateX(0rem) rotate(5deg);
+    }
+    25% {
+        opacity: 0.75;
+        transform: translateX(5rem) rotate(15deg);
+    }
+
+    40% {
+        transform: translateX(5rem) rotate(15deg);
+        opacity: 0;
+        z-index: 9;
+    }
+
+    60% {
+        transform: translateX(-5rem) rotate(-15deg);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    75% {
+        opacity: 0.75;
+        z-index: 1;
+    }
+
+    100% {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+/* anim for moving discs from back to front */
+
+@keyframes to-the-front {
+    25% {
+        opacity: 0.75;
+    }
+
+    40% {
+        transform: translateX(-5rem) rotate(-15deg);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    60% {
+        transform: translateX(2rem) rotate(15deg);
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.75;
+        z-index: 9;
+    }
+
+    100% {
+        transform: translateX(0rem) rotate(6deg);
+        opacity: 1;
+        z-index: 9;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .carousel {
+        margin: 10rem auto;
+    }}
+
+@media screen and (max-width: 576px) {
+    .arrowsWrapper {
+        width: 90vw;
+    }
+
+    .projectsContainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 330px;
+        width: 240px;
+    }
+
+    .illus {
+        height: 276px;
+        width: 182px;
+    }
+
+    .carousel{
+        margin: 5rem auto;
+    }
+}
+

@@ -1,0 +1,190 @@
+{
+    "projects": [
+        {
+            "id": "0",
+            "name": ["Cabinet CAP Patrimoine"],
+            "description": [
+                "Le Cabinet CAP Patrimoine, spécialisé en conseil de gestion de patrimoine, était à la recherche d'une présence en ligne qui reflète son engagement envers l'excellence dans le domaine financier, immobilier, de la défiscalisation, de la retraite, de l'épargne, et de la prévoyance."
+            ],
+            "objectives": [
+                "L'objectif était de créer un site web qui transmette la sophistication de leurs services tout en fournissant une expérience utilisateur intuitive."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure pour le Cabinet CAP Patrimoine, mettant en avant chaque aspect de leurs services de gestion privée.",
+                "La conception a été pensée pour refléter la confiance, l'expertise et l'attention personnalisée qu'ils offrent à leurs clients."
+            ],
+            "highlights": [
+                "Une esthétique sophistiquée pour correspondre à la nature haut de gamme des services du Cabinet.",
+                "Des sections détaillées sur les domaines de compétence du Cabinet, fournissant aux visiteurs des informations claires et utiles.",
+                "Des incitations stratégiques à contacter le Cabinet pour des conseils personnalisés."
+            ],
+            "result": {
+                "name": "visuels du site du cabinet cap patrimoine",
+                "path": "/assets/projects/capPatrimoine-card.webp",
+                "minify": "/assets/home/chris.webp",
+                "illus": "/assets/projects/capPatrimoine-visuel.webp"
+            },
+            "link": "https://cabinet-cap-patrimoine.fr/"
+        },
+        {
+            "id": "1",
+            "name": ["WealthHealth", "Application RH"],
+            "description": [
+                "Dernier projet de la formation Openclassrooms, il s'agit de créer une application de ressources humaines."
+            ],
+            "objectives": [
+                "L'objectif est de refondre une application pour réduire la dette technique (en passant de JQuery à react)"
+            ],
+            "implementation": [
+                "J'ai recodé entièrement l'application en créant une interface sobre, élégante et cohérente avec le secteur de la société.",
+                "La conception a été pensée pour être simple, efficace, intuitive et interactive."
+            ],
+            "highlights": [
+                "Optimisation des performances.",
+                "Modularité de l'interface.",
+                "Adaptabilité de l'interface aux différents supports."
+            ],
+            "result": {
+                "name": "visuels du site de l'application health wealth",
+                "path": "/assets/projects/WealthHealth-card.webp",
+                "minify": "/assets/home/WealthHealth.webp",
+                "illus": "/assets/projects/WealthHealth-visuel.webp"
+            },
+            "link": "https://oc-p14-hrnet-full-app-front.vercel.app/"
+        },
+        {
+            "id": "2",
+            "name": ["Portfolio", "photographe"],
+            "description": [
+                "Partant de l'idée que tout photographe professionnel se doit d'avoir un portfolio pour y présenter ses travaux, j'ai crée ce portfolio factice en m'appuyant sur les travaux de B. Priam photographe à Libourne."
+            ],
+            "objectives": [
+                "L'objectif était de créer un portfolio interactif et mettant en avant les photos."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure avec, au départ, le choix de la galerie",
+                "Dans la galerie, il y a un défilement parallaxe des photos cliquables."
+            ],
+            "highlights": [
+                "Mise en valeur des galeries de manière distinctive.",
+                "Exploration des galeries de manière intuitive et captivante."
+            ],
+            "result": {
+                "name": "visuels d'un portfolio de photographe'",
+                "path": "/assets/projects/ben-card.webp",
+                "minify": "/assets/home/ben.webp",
+                "illus": "/assets/projects/ben-visuel.webp"
+            },
+            "link": "https://maxime-malfilatre.com/sandbox/BenPriam/"
+        },
+        {
+            "id": "3",
+            "name": ["Jérémie Bonne", "Graphiste Bordelais"],
+            "description": [
+                "Jérémie Bonne est un graphiste talentueux basé à Bordeaux.",
+                "Spécialisé dans la communication, le lettrage, et l'identité visuelle, il fournit des services créatifs de haute qualité."
+            ],
+            "objectives": [
+                "L'objectif était de créer un site web qui mette en valeur le travail exceptionnel de Jérémie Bonne.",
+                "En collaborant étroitement avec lui, j'ai intégré sa maquette tout en garantissant une expérience utilisateur fluide et esthétique."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure, reflétant le style distinctif de Jérémie Bonne.",
+                "Chaque détail, du lettrage à l'identité visuelle, a été intégré avec précision pour présenter son travail de manière percutante."
+            ],
+            "highlights": [
+                "Une intégration fidèle de la maquette fournie par Jérémie Bonne.",
+                "Mise en avant de ses compétences en communication visuelle à travers des éléments graphiques saisissants.",
+                "Une navigation intuitive pour découvrir le portfolio diversifié de Jérémie Bonne."
+            ],
+            "result": {
+                "name": "visuels du site de Jérémie Bonne",
+                "path": "/assets/projects/jerem-card.webp",
+                "minify": "/assets/home/jerem.webp",
+                "illus": "/assets/projects/jerem-visuel.webp"
+            },
+            "link": "https://jeremie-bonne.fr/"
+        },
+        {
+            "id": "4",
+            "name": ["Mina Marrault", "Architecte d'Intérieurs"],
+            "description": [
+                "Mina Marrault est une architecte d'intérieurs passionnée par la création d'espaces uniques et fonctionnels qui reflètent la personnalité et le style de ses clients.","Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+            ],
+            "objectives": [
+                "L'objectif était de concevoir un site vitrine professionnel pour présenter le travail de Mina Marrault, mettre en valeur son portfolio et faciliter la prise de contact avec de potentiels clients."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur WordPress pour Mina Marrault, en mettant l'accent sur la présentation visuelle de ses réalisations et en assurant une navigation fluide pour les visiteurs.",
+                "Le design a été soigneusement élaboré pour refléter le style et l'esthétique de Mina, tout en offrant une expérience utilisateur intuitive."
+            ],
+            "highlights": [
+                "Présentation visuelle dynamique de son portfolio, mettant en avant ses projets les plus remarquables.",
+                "Intégration de fonctionnalités de contact facile pour permettre aux visiteurs d'entrer en communication avec Mina Marrault.",
+                "Optimisation pour les moteurs de recherche (SEO) afin d'assurer une visibilité maximale en ligne."
+            ],
+            "result": {
+                "name": "visuels du site de Mina Marrault",
+                "path": "/assets/projects/mina-card.webp",
+                "minify": "/assets/home/mina.webp",
+                "illus": "/assets/projects/mina-visuel.webp"
+            },
+            "link": "https://minamarrault.maxime-malfilatre.com/"
+        },
+        {
+            "id": "5",
+            "name": ["Chez Max", "Restaurant"],
+            "description": [
+                "Chez Max est un restaurant gastronomique français proposant une cuisine raffinée dans une ambiance chaleureuse.","Ce site web a été conçu pour refléter l'élégance et l'excellence culinaire du restaurant.","Ce site web est un exemple fictif créé dans le cadre d'une démonstration."
+            ],
+            "objectives": [
+                "L'objectif était de concevoir un site web attractif et fonctionnel, mettant en avant le menu, les réservations, et les avis des clients.",
+                "Le site devait offrir une expérience utilisateur fluide et intuitive, tout en reflétant l'identité du restaurant."
+            ],
+            "implementation": [
+                "J'ai développé un site web sur mesure pour Chez Max, en mettant l'accent sur une navigation facile et une présentation visuelle élégante des plats.",
+                "La page d'accueil présente le restaurant, tandis que la page des réservations permet aux clients de réserver facilement une table."
+            ],
+            "highlights": [
+                "Implémentation d'un système de réservations.",
+                "Interface utilisateur intuitive pour faciliter les réservations.",
+                "Section d'avis des clients pour bâtir la crédibilité et la réputation du restaurant."
+            ],
+            "result": {
+                "name": "visuels du site du restaurant chez Max",
+                "path": "/assets/projects/chezmax-card.webp",
+                "minify": "/assets/home/chezmax.webp",
+                "illus": "/assets/projects/chezmax-visuel.webp"
+            },
+            "link": "https://chezmax.maxime-malfilatre.com/"
+        },
+        {
+            "id": "6",
+            "name": ["Maxime Malfilâtre", "Développeur front-end"],
+            "description": [
+                "Je suis un développeur front-end basé à Bordeaux.",
+                "Mon portfolio présente mes compétences en matière de développement web, mettant en avant des projets variés et innovants."
+            ],
+            "objectives": [
+                "L'objectif était de concevoir un site web qui reflète ma personnalité.",
+                "Mon portfolio devait être plus qu'une simple vitrine de mes compétences, je le voulais comme une immersion dans mon style, ma créativité et mon approche du développement web."
+            ],
+            "implementation": [
+                "J'ai développé un site web mettant en avant mes projets.",
+                "L'interaction était au cœur de la conception, offrant aux visiteurs une expérience immersive qui va au-delà des simples démonstrations techniques."
+            ],
+            "highlights": [
+                "Une esthétique unique et personnelle.",
+                "Une exploration interactive des projets.",
+                "Une navigation immersive."
+            ],
+            "result": {
+                "name": "visuels du site de Maxime Malfilâtre",
+                "path": "/assets/projects/max-card.webp",
+                "minify": "/assets/home/max.webp",
+                "illus": "/assets/projects/max-visuel.webp"
+            },
+            "link": "https://pf.maxime-malfilatre.com/"
+        }
+    ]
+}

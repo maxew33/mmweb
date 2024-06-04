@@ -1,0 +1,186 @@
+@import '../../styles/scss/utils/mixins';
+
+.main {
+    @include flexCol;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--text);
+    width: 100%;
+    @include maxWidth;
+}
+
+.title {
+    @include title;
+}
+
+.presentation {
+    margin: auto;
+    font-size: 1.25rem;
+    max-width: 98%;
+}
+
+.pricingWrapper {
+    display: flex;
+    width: 98%;
+    @include maxWidth;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    justify-content: center;
+    gap: 2%;
+}
+
+.article {
+    @include flexCol;
+    // justify-content: space-between;
+    width: 31%;
+    aspect-ratio: 7/8;
+    background: #fff;
+    border-radius: 2.5rem;
+    box-shadow: 0px 4px 4px 0 var(--grey);
+    border: 2px solid var(--grey);
+    transition: transform 0.1s linear;
+    margin-top: 2rem;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.pricingTitle,
+.header {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.header {
+    background: var(--primary);
+    position: relative;
+    text-align: center;
+    padding: 1.5rem 0;
+    line-height: 1.5;
+    border-radius: 2.5rem 2.5rem 0 0;
+    // border: 2px solid var(--grey);
+    color: var(--accent);
+    font-family: var(--fontfam2);
+    & ::after {
+        content: '';
+        position: absolute;
+        bottom: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        height: 0;
+        width: 0;
+        border-top: 1rem solid var(--primary);
+        border-right: 1rem solid transparent;
+        border-left: 1rem solid transparent;
+    }
+}
+
+.price {
+    font-size: 3rem;
+    display: block;
+}
+
+.content {
+    @include flexCol;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 90%;
+    align-self: center;
+}
+
+.pricingTitle {
+    padding: 2rem 0 1rem 0;
+    font-size: 1.75rem;
+}
+
+.pricingSubtitle {
+    padding-bottom: 1rem;    
+    font-size: 1.5rem;
+}
+
+.pricingContent{  
+    font-size: 1.15rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .contentList {
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pricingWrapper {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .contentList {
+        height: auto;
+    }
+
+    .article {
+        flex-direction: row;
+        width: 45rem;
+        max-width: 98%;
+        margin: auto;
+    }
+
+    .header {
+        width: 30%;
+        padding: 1.5rem;
+        border-radius: 2.5rem 0 0 2.5rem;
+        & ::after {
+            left: 98%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 1rem solid transparent;
+            border-bottom: 1rem solid transparent;
+            border-left: 1rem solid var(--articleBg);
+        }
+    }
+
+    .content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .article {
+        &:hover {
+            transform: unset;
+        }
+    }
+
+    .header {
+        width: 40%;
+        padding: 1.5rem;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .labelForMore {
+        display: block;
+    }
+
+    .contentList {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        font-size: 5vw;
+    }
+    .price {
+        font-size: 10vw;
+        display: block;
+    }
+
+    .pricingTitle {
+        font-size: 6vw;
+    }
+}

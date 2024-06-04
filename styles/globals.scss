@@ -1,0 +1,70 @@
+@import './scss/base/reset', './scss/utils/mixins', './scss/utils/variables',
+    './scss/pages/home/home';
+
+// @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3&family=Varela+Round&family=Kalam&display=swap');
+
+/* END OF RESET */
+/*
+font-family: 'Source Sans 3', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Kalam', cursive;
+font-family: 'Varela Round', sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Cinzel", serif;
+font-family: "Martel", serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Martel:wght@200;300;400;600;700;800;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg: #{$bgCol};
+    --secondary: #{$secondary};
+    --primary: #{$primary};
+
+    --text: #{$textCol};
+    --accent: #{$accent};
+
+    --grey: #{$grey};
+
+    --fontfam1: 'Martel', serif;
+    --fontfam2: 'Raleway', sans-serif;
+    --fontfam3: 'Kalam', cursive;
+}
+
+body {
+    color: var(--text);
+    font-family: var(--fontfam2);
+    // @include sectionBg;
+    overflow-x: hidden;
+}
+
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a,
+a:hover,
+a:visited {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .home-contactBtn {
+        text-decoration: none;
+        padding: 0.75rem 1.25rem;
+    }
+    :root {
+        font-size: 12px;
+    }
+}

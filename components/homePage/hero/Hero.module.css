@@ -1,0 +1,238 @@
+.section {
+  position: sticky;
+  top: 4rem;
+  overflow: hidden;
+}
+
+.article {
+  justify-content: center;
+  height: 90vh;
+  display: grid;
+  text-align: center;
+  grid-template-areas: "title carousel" "welcome carousel" "link carousel";
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+  grid-area: title;
+  font-size: 7.5rem;
+  align-self: center;
+}
+
+.presentation {
+  grid-area: welcome;
+  font-size: 3.5rem;
+  align-self: center;
+  line-height: 1.15;
+}
+
+.highlighted {
+  color: var(--accent);
+  font-family: var(--fontfam2);
+}
+
+.linkWrapper {
+  grid-area: link;
+}
+
+.link {
+  color: unset;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.15s linear;
+  transform-origin: left;
+}
+.link.active::after, .link:hover::after {
+  transform: scaleX(1);
+}
+
+.icon {
+  height: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--text);
+  fill: var(--text);
+  transition: color 0.125s linear, fill 0.125s linear;
+}
+.icon:hover {
+  color: var(--accent);
+  fill: var(--accent);
+}
+
+.carouselContainer {
+  position: relative;
+  grid-area: carousel;
+  height: 100%;
+  width: 100%;
+}
+.carouselContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/home/hand.webp");
+  background-repeat: no-repeat;
+  background-size: 35rem;
+  background-position: bottom right;
+}
+.carouselContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 17.2rem;
+  width: 12.75rem;
+  right: 11.1rem;
+  aspect-ratio: 0.58;
+  background: black;
+  overflow: hidden;
+}
+
+.carousel {
+  position: absolute;
+  bottom: 17.2rem;
+  width: 12.75rem;
+  right: 11.1rem;
+  aspect-ratio: 0.58;
+  overflow: hidden;
+  cursor: pointer;
+}
+.carousel .projectLink {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.carouselIllus {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(-200%);
+}
+.carouselIllus[data-position="1"] {
+  transform: translate(-100%);
+  z-index: 10;
+}
+.carouselIllus[data-position="2"] {
+  transform: translate(0%);
+  z-index: 10;
+}
+
+.commentContainer {
+  position: absolute;
+  width: 10rem;
+  bottom: 40rem;
+  right: 11rem;
+}
+
+.comment {
+  position: absolute;
+  top: -2.5rem;
+  left: 0.75rem;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: right;
+  color: var(--text);
+}
+.comment::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 0.5rem;
+  background-image: url("/assets/home/arrow.webp");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+
+@media screen and (max-width: 1080px) {
+  .article {
+    grid-template-areas: "welcome carousel" "title carousel" "link carousel";
+  }
+  .presentation {
+    font-size: max(5vw, 3rem);
+  }
+  .title {
+    font-size: max(4vw, 2.25rem);
+  }
+  .hook {
+    font-size: max(1.75vw, 1rem);
+  }
+  .carouselContainer::after, .carouselContainer::before {
+    display: none;
+  }
+  .carousel {
+    border: 5px solid var(--secondary);
+    border-radius: 7px;
+    position: absolute;
+    width: 15rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .commentContainer {
+    position: absolute;
+    width: 7.5rem;
+    top: calc(50% - 13.5rem);
+    left: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article {
+    grid-template-areas: "title title" "welcome carousel" "link carousel" "link carousel";
+  }
+  .carouselContainer::after, .carouselContainer::before {
+    display: none;
+  }
+  .carousel {
+    width: 15rem;
+  }
+  .presentation {
+    margin: auto;
+    text-align: center;
+  }
+  .linkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section {
+    height: 110vh;
+  }
+  .article {
+    height: unset;
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+    grid-template-areas: "title" "carousel" "welcome" "link";
+    margin-top: 5vh;
+  }
+  .logo {
+    display: none;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .presentation {
+    font-size: 2rem;
+  }
+  .carouselContainer {
+    background: unset;
+    height: 31rem;
+  }
+  .commentContainer {
+    display: none;
+  }
+}

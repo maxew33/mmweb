@@ -1,0 +1,151 @@
+@import '../../styles/scss/utils/mixins';
+
+.article {
+    position: relative;
+    width: calc(100% - 3rem);
+    height: auto;
+    @include maxWidth;
+    // color: white;
+    margin: auto;
+    // padding: 2rem 1rem;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    background: var(--primary);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
+}
+
+.container {
+    overflow: hidden;
+    width: 98%;
+    margin-inline: auto;
+}
+
+.exit {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: unset;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.content {
+    overflow: hidden;
+    width: min(98%, 90vw);
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        'title title'
+        'description description'
+        'objectives illus'
+        'implementation illus'
+        'hightlights illus';
+    gap: 1.5rem;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 0.75rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    & span:not(:first-of-type){
+        font-size: 2rem;
+    }
+}
+
+.description {
+    font-size: 1.25rem;
+    grid-area: description;
+    margin-bottom: 0.75rem;
+    & span {
+        display: block;
+    }
+}
+
+.contentTitle {
+    font-size: 1.75rem;
+    font-family: var(--fontfam1);
+}
+
+.contentText {
+    line-height: 1.5;
+    margin-left: 1.5rem;
+    font-size: 1.15rem;
+
+    & span {
+        display: block;
+    }
+}
+
+.contentLink {
+    margin-left: 5rem;
+    grid-area: illus;
+    align-self:end ;
+}
+
+.contentIllus {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.objectives {
+    grid-area: objectives;
+}
+
+.implementation {
+    grid-area: implementation;
+}
+
+.highlights {
+    grid-area: hightlights;
+        padding-bottom: 2rem;
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        font-size: 1.75rem;
+    }
+
+    .active {
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        font-size: 1.25rem;
+    }
+}
+
+/* Tablette */
+@media screen and (max-width: 991px) {
+    .header {
+        width: 100%;
+        border-radius: unset;
+    }
+    .nameContainer {
+        border-radius: unset;
+    }
+
+    .content {
+        grid-template-areas:
+            'title'
+            'description'
+            'illus'
+            'objectives '
+            'implementation '
+            'hightlights ';
+    }
+
+    .contentLink {
+        margin: 2rem auto 0;
+    }
+}

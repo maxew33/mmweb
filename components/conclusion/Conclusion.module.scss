@@ -1,0 +1,21 @@
+@import '../../styles/scss/utils/mixins';
+.section {
+    @include maxWidth;
+    position: relative;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 15rem 0 2rem;
+}
+
+.content{
+    font-size: 1.5rem;;
+}
+
+.btn {
+    @include contactUs($size: 2.25rem);
+    padding: 0.5rem 2.5rem;
+    margin: 5rem 0;
+}

@@ -1,0 +1,40 @@
+.legalNoticeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 0;
+  line-height: 1.15;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 2.5rem 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  font-size: 1.15rem;
+}
+.legalNoticeWrapper section {
+  margin-top: 5rem;
+}
+.legalNoticeWrapper h1, .legalNoticeWrapper h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.legalNoticeWrapper h2 {
+  font-size: 2rem;
+}
+.legalNoticeWrapper h3 {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.legalNoticeWrapper h4 {
+  font-size: 1.25rem;
+}
+.legalNoticeWrapper a {
+  color: unset;
+}
+
+.underlined {
+  text-decoration: underline;
+}
